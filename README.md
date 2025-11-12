@@ -4,12 +4,12 @@ A modern, user-friendly web application for generating and downloading QR codes.
 
 ## Features
 
-🎨 Beautiful, responsive UI with gradient backgrounds
-⚡ Fast QR code generation
-📥 Download QR codes as PNG images
-🔄 Real-time preview
-📱 Mobile-friendly design
-✨ Smooth animations and transitions
+- 🎨 Beautiful, responsive UI with gradient backgrounds
+- ⚡ Fast QR code generation
+- 📥 Download QR codes as PNG images
+- 🔄 Real-time preview
+- 📱 Mobile-friendly design
+- ✨ Smooth animations and transitions
 
 ## Installation
 
