@@ -131,7 +131,7 @@ body {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 255, 255, 0.1);
-    padding: 40px;
+    padding: 30px;
     max-width: 600px;
     width: 100%;
     animation: fadeIn 0.5s ease-in;
@@ -152,33 +152,27 @@ body {
 
 .header {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .logo {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
-.logo svg {
-    width: 250px;
+.logo img {
+    max-width: 500px;
+    width: 90%;
     height: auto;
-    filter: drop-shadow(0 0 10px rgba(102, 126, 234, 0.3));
-}
-
-.qr-icon {
-    animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.7;
-    }
+    max-height: 200px;
+    object-fit: contain;
+    object-position: center;
+    filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.3)) brightness(1.1);
+    background: transparent;
+    mix-blend-mode: screen;
 }
 
 .header p {
