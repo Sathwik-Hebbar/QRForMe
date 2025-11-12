@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRForMe - QR Code Generator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="static/logo.png" alt="QRForMe Logo">
+            </div>
+            <p>Generate QR codes for URLs, text, or any data</p>
+        </div>
+        
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="urlInput" 
+                placeholder="Enter URL or text to encode..."
+                autocomplete="off"
+            >
+            <button id="generateBtn" class="btn btn-primary">Generate QR Code</button>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div id="qrDisplay" class="qr-display" style="display: none;">
+            <div class="qr-container">
+                <canvas id="qrCanvas"></canvas>
+            </div>
+            <button id="downloadBtn" class="btn btn-success">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download QR Code
+            </button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating QR Code...</p>
+        </div>
+    </div>
+
+    <!-- QR Code Library -->
+    <script src="static/qrcode.min.js"></script>
+    <script src="static/app.js"></script>
+</body>
+</html>
