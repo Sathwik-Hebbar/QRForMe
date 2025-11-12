@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRForMe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                    <!-- QR Code Icon -->
+                    <g class="qr-icon">
+                        <rect x="5" y="5" width="50" height="50" fill="none" stroke="#667eea" stroke-width="2" rx="4"/>
+                        <rect x="10" y="10" width="15" height="15" fill="#667eea" rx="2"/>
+                        <rect x="10" y="35" width="15" height="15" fill="#667eea" rx="2"/>
+                        <rect x="35" y="10" width="15" height="15" fill="#667eea" rx="2"/>
+                        <rect x="30" y="30" width="8" height="8" fill="#667eea"/>
+                        <rect x="40" y="30" width="8" height="8" fill="#667eea"/>
+                        <rect x="30" y="40" width="8" height="8" fill="#667eea"/>
+                        <rect x="40" y="40" width="8" height="8" fill="#667eea"/>
+                    </g>
+                    <!-- Text -->
+                    <text x="65" y="40" font-family="'Segoe UI', Arial, sans-serif" font-size="28" font-weight="700" fill="#ffffff">QRForMe</text>
+                </svg>
+            </div>
+            <p>Generate QR codes for URLs, text, or any data</p>
+        </div>
+        
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="urlInput" 
+                placeholder="Enter URL or text to encode..."
+                autocomplete="off"
+            >
+            <button id="generateBtn" class="btn btn-primary">Generate QR Code</button>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        
+        <div id="qrDisplay" class="qr-display" style="display: none;">
+            <div class="qr-container">
+                <img id="qrImage" src="" alt="QR Code">
+            </div>
+            <button id="downloadBtn" class="btn btn-success">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download QR Code
+            </button>
+        </div>
+        
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Generating QR Code...</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
